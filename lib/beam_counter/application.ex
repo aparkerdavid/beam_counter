@@ -13,9 +13,10 @@ defmodule BeamCounter.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: BeamCounter.PubSub},
       # Start the Endpoint (http/https)
-      BeamCounterWeb.Endpoint
+      BeamCounterWeb.Endpoint,
       # Start a worker by calling: BeamCounter.Worker.start_link(arg)
       # {BeamCounter.Worker, arg}
+      {BeamCounter.Counter, 0}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

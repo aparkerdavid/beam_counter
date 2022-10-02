@@ -16,8 +16,7 @@ defmodule BeamCounterWeb.Router do
 
   scope "/", BeamCounterWeb do
     pipe_through :browser
-
-    get "/", PageController, :index
+    live "/", Counter
   end
 
   # Other scopes may use custom stacks.
