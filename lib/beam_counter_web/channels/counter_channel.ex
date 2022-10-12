@@ -4,7 +4,7 @@ defmodule BeamCounterWeb.CounterChannel do
   alias Phoenix.PubSub
 
   @impl true
-  def init(_channel, _payload, _socket) do
+  def init(_, _, _) do
     PubSub.subscribe(BeamCounter.PubSub, "count")
 
     {:ok, %{count: Counter.value()}}
@@ -17,7 +17,7 @@ defmodule BeamCounterWeb.CounterChannel do
   end
 
   @impl true
-  def handle_message({:count, n}, state) do
+  def handle_message({:count, n}, _state) do
     {:noreply, %{count: n}}
   end
 end

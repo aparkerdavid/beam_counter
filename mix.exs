@@ -45,7 +45,7 @@ defmodule BeamCounter.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:live_state, "~> 0.2.0"},
+      {:live_state, "~> 0.6.0"},
       {:cors_plug, "~> 3.0"}
     ]
   end
