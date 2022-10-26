@@ -59,7 +59,11 @@ defmodule BeamCounter.MixProject do
   defp aliases do
     [
       setup: ["deps.get"],
-      "assets.deploy": ["esbuild default --minify", "phx.digest"]
+      "assets.deploy": [
+        "esbuild default --minify",
+        "phx.digest assets/static -o priv/static",
+        "phx.digest"
+      ]
     ]
   end
 end
