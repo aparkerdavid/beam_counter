@@ -1,0 +1,17 @@
+{
+  "name": "BeamCounter",
+  "short_name": "BeamCounter",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "black",
+  "scope": ".",
+  "description": "Massively Multiplayer Online Incrementing Counter",
+  "icons": [
+    {
+      "src": "images/beam-counter.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
