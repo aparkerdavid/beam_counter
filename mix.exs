@@ -61,7 +61,6 @@ defmodule BeamCounter.MixProject do
       setup: ["deps.get"],
       "assets.deploy": [
         "esbuild default --minify",
-        "phx.digest assets/static -o priv/static",
         "phx.digest"
       ]
     ]
