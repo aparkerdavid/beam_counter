@@ -42,6 +42,15 @@ defmodule BeamCounterWeb do
     end
   end
 
+  def live_view_native do
+    quote do
+      use Phoenix.LiveView,
+        layout: {BeamCounterWeb.LayoutView, "native_live.html"}
+
+      unquote(view_helpers())
+    end
+  end
+
   def live_view do
     quote do
       use Phoenix.LiveView,

@@ -1,4 +1,4 @@
-defmodule BeamCounterWeb.Counter do
+defmodule BeamCounterWeb.Live.Counter do
   use BeamCounterWeb, :live_view
   alias BeamCounter.Counter
   alias Phoenix.PubSub

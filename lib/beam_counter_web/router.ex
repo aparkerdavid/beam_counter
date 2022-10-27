@@ -16,7 +16,8 @@ defmodule BeamCounterWeb.Router do
 
   scope "/", BeamCounterWeb do
     pipe_through :browser
-    live "/", Counter
+    live "/", Live.Counter
+    live "/native", Live.CounterNative
   end
 
   # Other scopes may use custom stacks.
