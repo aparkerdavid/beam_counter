@@ -5,9 +5,7 @@ defmodule BeamCounterWeb.Live.CounterNative do
   @impl true
   def render(assigns) do
     ~H"""
-     <button phx-click="increment">
-       <text><%= @count %></text>
-     </button>
+    <big-button text={@count} phx-click="increment"></big-button>
     """
   end
 
