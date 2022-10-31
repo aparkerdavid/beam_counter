@@ -4,6 +4,7 @@
 html {
   background: linear-gradient(#2c1760, #6042bc) no-repeat center center fixed;
   background-size: cover;
+  touch-action: manipulation;
 }
 
 div.center {
@@ -14,7 +15,6 @@ div.center {
 button,
 button:hover,
 button:focus {
-  touch-action: manipulation;
   background-color: #f7a006;
   color: #190641;
   font-size: 72px;
