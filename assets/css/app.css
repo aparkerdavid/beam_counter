@@ -1,6 +1,35 @@
 /* This file is for your main application CSS */
 @import "./phoenix.css";
 
+html {
+  background: linear-gradient(#2c1760, #6042bc) no-repeat center center fixed;
+  background-size: cover;
+}
+
+div.center {
+  display: flex;
+  padding-top: 20vh;
+}
+
+button,
+button:hover,
+button:focus {
+  background-color: #f7a006;
+  color: #190641;
+  font-size: 72px;
+  border-radius: 999px;
+  border: 0px;
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 100px 20px rgba(247, 160, 6, 0.5);
+  transition: box-shadow 0.1s;
+}
+button:active {
+  background-color: #8ad3e3;
+  box-shadow: 0px 0px 100px 30px rgba(138, 211, 227, 0.75);
+}
+
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;
@@ -46,12 +75,12 @@
   transition: opacity 1s ease-out;
 }
 
-.phx-loading{
+.phx-loading {
   cursor: wait;
 }
 
 .phx-modal {
-  opacity: 1!important;
+  opacity: 1 !important;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -59,7 +88,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .phx-modal-content {
@@ -99,22 +128,42 @@
   animation: 0.2s ease-out 0s normal forwards 1 fade-out-keys;
 }
 
-@keyframes fade-in-scale-keys{
-  0% { scale: 0.95; opacity: 0; }
-  100% { scale: 1.0; opacity: 1; }
+@keyframes fade-in-scale-keys {
+  0% {
+    scale: 0.95;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
 }
 
-@keyframes fade-out-scale-keys{
-  0% { scale: 1.0; opacity: 1; }
-  100% { scale: 0.95; opacity: 0; }
+@keyframes fade-out-scale-keys {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 0.95;
+    opacity: 0;
+  }
 }
 
-@keyframes fade-in-keys{
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes fade-in-keys {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes fade-out-keys{
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+@keyframes fade-out-keys {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

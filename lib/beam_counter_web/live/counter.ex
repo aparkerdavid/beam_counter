@@ -6,7 +6,9 @@ defmodule BeamCounterWeb.Live.Counter do
   @impl true
   def render(assigns) do
     ~H"""
-     <button phx-click="increment"><%= @count %></button>
+    <div class="center">
+      <button phx-click="increment"><%= @count %></button>
+    </div>
     """
   end
 
