@@ -15,16 +15,11 @@ defmodule BeamCounterWeb.Live.Counter do
   @impl true
   def mount(_, _, socket) do
     PubSub.subscribe(BeamCounter.PubSub, "count")
+    count = Counter.value()
 
     socket
-    |> assign(count: Counter.value())
+    |> assign(count: count)
     |> then(&{:ok, &1})
-  end
-
-  @impl true
-  def handle_event("increment", _, socket) do
-    Counter.increment()
-    {:noreply, socket}
   end
 
   @impl true
@@ -32,5 +27,11 @@ defmodule BeamCounterWeb.Live.Counter do
     socket
     |> assign(count: n)
     |> then(&{:noreply, &1})
+  end
+
+  @impl true
+  def handle_event("increment", _, socket) do
+    Counter.increment()
+    {:noreply, socket}
   end
 end
